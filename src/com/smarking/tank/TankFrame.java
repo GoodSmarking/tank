@@ -1,6 +1,8 @@
 package com.smarking.tank;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -56,10 +58,34 @@ public class TankFrame extends Frame {
 
             }
         });
+
+        // 添加键盘监听器
+        addKeyListener();
+
+
     }
 
     @Override
     public void paint(Graphics g) {
         g.fillRect(100, 100, 50, 50);
+    }
+
+    // 键盘监听器，使用内部类的形式
+    class TankKeyListener implements KeyListener{
+
+        @Override
+        public void keyTyped(KeyEvent e) {
+
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+
+        }
     }
 }
